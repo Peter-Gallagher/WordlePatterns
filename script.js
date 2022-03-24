@@ -82,7 +82,7 @@ function getResults(answerWord){
                         viableWord=false;
                     }
                 } else if (square == partial){
-                    if (answerWord[index] == targetWord[index] || !targetWord.includes(answerWord[index]) ){
+                    if (answerWord[index] == targetWord[index] || !answerWord.includes(targetWord[index]) ){
                         viableWord = false;
                     }
                 } else { //Square is wrong
@@ -102,7 +102,7 @@ function getResults(answerWord){
         }
         if (thisRowsWord != ""){
             console.log("   row: " + row + " viable word: " + targetWord);
-            document.getElementById("row" + row).innerText = " viable word: " + targetWord;
+            document.getElementById("row" + row).innerText = targetWord;
         } else {
             console.log("   row: " + row + "NO VIABLE WORD FOUND");
             document.getElementById("row" + row).innerText = "NO VIABLE WORD FOUND";
